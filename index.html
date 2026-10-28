@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akbar Prasetio | CV</title>
+  <meta name="description" content="CV of Akbar Prasetio, Informatics student at Telkom University and Frontend Developer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f6fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --accent-soft: #e0e9ff;
+      --line: #e5e7eb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --card: #111c33;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+        --accent: #60a5fa;
+        --accent-soft: #1e3a5f;
+        --line: #23304d;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 40px 16px;
+    }
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: #fff;
+      padding: 48px 40px 40px;
+    }
+    header h1 { font-size: 2.4rem; font-weight: 800; letter-spacing: -0.5px; }
+    header .role { font-size: 1.1rem; opacity: 0.9; margin-top: 4px; }
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+    .contacts a, .contacts span {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.88rem;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 6px 14px;
+      border-radius: 999px;
+      transition: background 0.2s;
+    }
+    .contacts a:hover { background: rgba(255, 255, 255, 0.3); }
+
+    main { padding: 36px 40px 44px; }
+    section { margin-bottom: 36px; }
+    section:last-child { margin-bottom: 0; }
+    h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+      font-weight: 700;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--line);
+      margin-bottom: 18px;
+    }
+    .summary { color: var(--muted); font-size: 1rem; }
+
+    /* Entries */
+    .item { margin-bottom: 22px; }
+    .item:last-child { margin-bottom: 0; }
+    .item-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px 16px;
+    }
+    .item-title { font-weight: 700; font-size: 1.05rem; }
+    .item-date { color: var(--muted); font-size: 0.88rem; white-space: nowrap; }
+    .item-sub { color: var(--accent); font-weight: 500; font-size: 0.95rem; }
+    .item-sub .muted { color: var(--muted); font-weight: 400; }
+    .item ul { margin: 8px 0 0 18px; }
+    .item li { margin-bottom: 5px; font-size: 0.95rem; }
+    .item li::marker { color: var(--accent); }
+    .badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 2px 10px;
+      border-radius: 999px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    /* Skills */
+    .skill-group { margin-bottom: 14px; }
+    .skill-group:last-child { margin-bottom: 0; }
+    .skill-label { font-weight: 600; font-size: 0.92rem; margin-bottom: 8px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 5px 12px;
+      border-radius: 8px;
+    }
+
+    .cert { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; margin-bottom: 8px; }
+    .cert span:first-child { font-weight: 500; }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 0; }
+      .container { border-radius: 0; }
+      header { padding: 36px 20px 30px; }
+      header h1 { font-size: 1.9rem; }
+      main { padding: 28px 20px 32px; }
+    }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .container { box-shadow: none; border-radius: 0; }
+      header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Akbar Prasetio</h1>
+      <p class="role">Informatics Student · Frontend Developer</p>
+      <div class="contacts">
+        <span>📍 Bogor, Indonesia</span>
+        <a href="tel:+6281294831314">📞 +62-812-9483-1314</a>
+        <a href="mailto:akbarprasetio42@gmail.com">✉️ akbarprasetio42@gmail.com</a>
+        <a href="https://github.com/AkbarPrasetio" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/akbar-prasetio" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>About Me</h2>
+        <p class="summary">
+          Informatics student at Telkom University with interest in software development, web application development,
+          and database systems. Experienced in developing application projects, focusing on responsive frontend
+          development while maintaining a strong foundational knowledge of backend systems. Skilled in problem solving,
+          teamwork, and building technology solutions based on user needs.
+        </p>
+      </section>
+
+      <section>
+        <h2>Work Experience</h2>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-title">UrbanSolv <span class="badge">Internship</span></span>
+            <span class="item-date">Jun 2026 – Aug 2026</span>
+          </div>
+          <div class="item-sub">Frontend Developer Intern</div>
+          <ul>
+            <li>Built responsive frontend interfaces for a managerial Building Management System (BMS) platform for
+              PT Kereta Api Indonesia (KAI), piloted at Purwokerto Station, covering three dashboards: Executive
+              Performance &amp; ESG; Energy, Utility &amp; Compliance; and Asset, Maintenance &amp; Reliability.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-title">Telkom University</span>
+            <span class="item-date">Bandung, Indonesia</span>
+          </div>
+          <div class="item-sub">Bachelor of Informatics <span class="muted">· Expected Graduation: 2027</span></div>
+          <ul>
+            <li>Relevant Coursework: Machine Learning, Artificial Intelligence, Data Structures, Object Oriented
+              Programming, Database Systems</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-title">Curhatin <span class="badge">Team Project</span></span>
+            <span class="item-date">May 2026</span>
+          </div>
+          <div class="item-sub">Frontend Developer &amp; UI Designer</div>
+          <ul>
+            <li>Designed an empathy-driven UI/UX prototype focused on user experience, achieving a 90% user
+              satisfaction score during initial usability testing.</li>
+            <li>Collaborated on backend Python API integrations to ensure seamless data binding and accelerate
+              front-to-back connectivity by 25%.</li>
+            <li>Converted design wireframes into clean code while maintaining pixel-perfect layouts, optimizing
+              cross-browser compatibility and system interface consistency.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-title">Confessly <span class="badge">Team Project</span></span>
+            <span class="item-date">Feb 2025 – Mar 2025</span>
+          </div>
+          <div class="item-sub">Frontend Developer</div>
+          <ul>
+            <li>Developed responsive frontend interfaces using HTML/CSS and structured UI components, improving mobile
+              user accessibility and reducing page-load latency by 15%.</li>
+            <li>Collaborated with backend engineers to implement end-to-end features, ensuring seamless API integration
+              and data binding for user interaction flows.</li>
+            <li>Optimized client-side components to maintain consistent rendering and multi-device usability across
+              3+ core application pages.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Leadership &amp; Organization</h2>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-title">BPM HIMA IF Telkom University</span>
+            <span class="item-date">Sep 2024 – Feb 2026</span>
+          </div>
+          <div class="item-sub">Expert Staff of the Aspiration Commission</div>
+          <ul>
+            <li>Managed and documented 300+ student aspiration submissions by organizing feedback, categorizing
+              issues, and preparing structured reports.</li>
+            <li>Analyzed student feedback data to support communication between Informatics students and related
+              departments.</li>
+            <li>Coordinated aspiration delivery through systematic documentation and reporting workflows to improve
+              information flow.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Certifications</h2>
+        <div class="cert"><span>Azure AI Fundamentals (AI-900) — Microsoft</span><span class="item-date">Mar 2026</span></div>
+        <div class="cert"><span>Introducing Data Analytics and Analytical Thinking — Google</span><span class="item-date">May 2026</span></div>
+      </section>
+
+      <section>
+        <h2>Technical Skills</h2>
+        <div class="skill-group">
+          <div class="skill-label">Programming &amp; Databases</div>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">C++</span>
+            <span class="tag">Dart</span><span class="tag">Java</span><span class="tag">JavaScript</span>
+            <span class="tag">MariaDB</span><span class="tag">MySQL</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-label">Web &amp; Application Development</div>
+          <div class="tags">
+            <span class="tag">React.js</span><span class="tag">Tailwind CSS</span><span class="tag">Flutter</span>
+            <span class="tag">Laravel</span><span class="tag">REST API</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-label">Tools &amp; Version Control</div>
+          <div class="tags">
+            <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Visual Studio Code</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer>© 2026 Akbar Prasetio</footer>
+</body>
+</html>
